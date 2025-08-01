@@ -7,7 +7,8 @@ export default function Plant({ plant, image, shoppingCart, setShoppingCart }) {
   const clicker = () => {
     const foundItem = shoppingCart.find((item) => item.name === plant);
 
-    if (!foundItem) {
+    console.log(`${plant} clicked`)
+    if (foundItem) {
       console.log("it was here")
       setShoppingCart(shoppingCart.map(item =>
         item.name === plant ? {...item, quantity: item.quantity + 1}: item
@@ -19,7 +20,6 @@ export default function Plant({ plant, image, shoppingCart, setShoppingCart }) {
       setShoppingCart([...shoppingCart, { name: plant, quantity: 1}]);
       console.log(shoppingCart)
     }
-    console.log(`${plant} clicked`)
 }
 
   return (
