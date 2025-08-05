@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./cart.css"; // Assuming you have a CSS file for styling the cart
 
 export default function ShoppingCart({ shoppingCart, setShoppingCart }) {
   console.log("FUNCTION: the shopping cart");
@@ -8,7 +9,7 @@ export default function ShoppingCart({ shoppingCart, setShoppingCart }) {
   return (
     <div>
       {shoppingCart.map((plant) => (
-        <li key={plant.name} onClick={() => console.log("plant selected")}>
+        <li className="cartLi" key={plant.name} onClick={() => console.log("plant selected")}>
           {plant.image}
           {plant.name}
           <button

@@ -31,7 +31,6 @@ export default function App() {
             </li>
           ))}
           </ul>
-        </div>
         <h2>Cart</h2>
         {shoppingCart.length > 0 ? (
           <div className = "shoppingCart">
@@ -43,7 +42,8 @@ export default function App() {
           <div >
             <p>Your cart is empty</p>
           </div>
-        )}       
+        )}
+        </div>       
       </main>
     </>
   );
