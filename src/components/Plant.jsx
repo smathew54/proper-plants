@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 
 export default function Plant({ plant, image, shoppingCart, setShoppingCart }) {
 
@@ -11,15 +11,16 @@ export default function Plant({ plant, image, shoppingCart, setShoppingCart }) {
     if (foundItem) {
       console.log("it was here")
       setShoppingCart(shoppingCart.map(item =>
-        item.name === plant ? {...item, quantity: item.quantity + 1}: item
+        item.name === plant ? {...item, quantity: item.quantity + 1, image:image}: item
       ));
       console.log(shoppingCart)
     }
     else {
       console.log("Not in the shopping cart")
-      setShoppingCart([...shoppingCart, { name: plant, quantity: 1}]);
+      setShoppingCart([...shoppingCart, { name: plant, quantity: 1, image:image} ]);
       console.log(shoppingCart)
     }
+    
 }
 
   return (

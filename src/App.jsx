@@ -6,11 +6,8 @@ import Plant from "./components/Plant.jsx";
 export default function App() {
   //console.log(PLANTS)
 
-//state variables get added somewhere here
-  const[shoppingCart, setShoppingCart] = useState([]);
-
-
-
+  //state variables get added somewhere here
+  const [shoppingCart, setShoppingCart] = useState([]);
 
   return (
     <>
@@ -21,16 +18,28 @@ export default function App() {
       <main>
         <p>Choose your plant!</p>
         <div>
-        {PLANTS.map((element) => (
-          <Plant image = {element.image} plant={element.name} key={element.id}
-          shoppingCart = {shoppingCart}
-          setShoppingCart = {setShoppingCart} />
-        ))}
+          {PLANTS.map((element) => (
+            <Plant
+              image={element.image}
+              plant={element.name}
+              key={element.id}
+              shoppingCart={shoppingCart}
+              setShoppingCart={setShoppingCart}
+            />
+          ))}
         </div>
         <h2>Cart</h2>
-        <ShoppingCart 
+        {shoppingCart.length > 0 ? (
+          <div>
+            <ShoppingCart 
         shoppingCart = {shoppingCart}
         setShoppingCart = {setShoppingCart}/>
+          </div>
+        ) : (
+          <div>
+            <p>Please Choose a Plant</p>
+          </div>
+        )}       
       </main>
     </>
   );
