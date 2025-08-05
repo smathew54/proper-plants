@@ -16,7 +16,7 @@ export default function App() {
         <h2>Plants</h2>
       </header>
       <main>
-        <p>Choose your plant!</p>
+        <div className = "allOfThePage">
         <div className = "plantsDiv">
           <ul className="plantsUl">
           {PLANTS.map((element) => (
@@ -43,7 +43,8 @@ export default function App() {
             <p>Your cart is empty</p>
           </div>
         )}
-        </div>       
+        </div> 
+        </div>      
       </main>
     </>
   );

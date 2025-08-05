@@ -1,10 +1,16 @@
+.allOfThePage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 2rem;
+  }
 
 .plantsDiv{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    width: 75vw; 
+
+    width: 80vw; 
     margin: left;
     justify-content: flex-start;
     gap: 1rem;
@@ -25,21 +31,20 @@
     padding: 0;
     margin: 0;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 5px;
     align-items: flex-start;
     display: flex;
     flex-direction: row;
-
     margin: 10px;
-
     border-radius: 5px;
-    width: 200px
+    width: 200px;
+    align-content: center;
   }
 
   .shoppingCartDiv {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 15vw;
+    width: 10vw;
     margin: 0 auto;
   }
