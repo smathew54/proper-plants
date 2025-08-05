@@ -20,6 +20,7 @@ export default function ShoppingCart({ shoppingCart, setShoppingCart }) {
                     ? { ...item, quantity: Math.max(item.quantity - 1, 0) }
                     : item
                 )
+                .filter(item => item.quantity > 0)
               );
             }}
           >
