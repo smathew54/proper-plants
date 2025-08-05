@@ -17,8 +17,10 @@ export default function App() {
       </header>
       <main>
         <p>Choose your plant!</p>
-        <div className = "plantsHolder">
+        <div className = "plantsDiv">
+          <ul className="plantsUl">
           {PLANTS.map((element) => (
+            <li key={element.id} className = "prettyPlantLi">
             <Plant
               image={element.image}
               plant={element.name}
@@ -26,7 +28,9 @@ export default function App() {
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
             />
+            </li>
           ))}
+          </ul>
         </div>
         <h2>Cart</h2>
         {shoppingCart.length > 0 ? (
@@ -36,7 +40,7 @@ export default function App() {
         setShoppingCart = {setShoppingCart}/>
           </div>
         ) : (
-          <div className = "shoppingCart">
+          <div >
             <p>Your cart is empty</p>
           </div>
         )}       

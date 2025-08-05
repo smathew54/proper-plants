@@ -11,7 +11,6 @@ export default function ShoppingCart({ shoppingCart, setShoppingCart }) {
         <li key={plant.name} onClick={() => console.log("plant selected")}>
           {plant.image}
           {plant.name}
-          {plant.quantity}
           <button
             onClick={() => {
               setShoppingCart((shoppingCart) =>
@@ -26,6 +25,7 @@ export default function ShoppingCart({ shoppingCart, setShoppingCart }) {
           >
             -
           </button>
+          {plant.quantity}
           <button
                         onClick={() => {
                           setShoppingCart((shoppingCart) =>
