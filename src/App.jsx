@@ -17,7 +17,7 @@ export default function App() {
       </header>
       <main>
         <p>Choose your plant!</p>
-        <div>
+        <div className = "plantsHolder">
           {PLANTS.map((element) => (
             <Plant
               image={element.image}
@@ -30,14 +30,14 @@ export default function App() {
         </div>
         <h2>Cart</h2>
         {shoppingCart.length > 0 ? (
-          <div>
+          <div className = "shoppingCart">
             <ShoppingCart 
         shoppingCart = {shoppingCart}
         setShoppingCart = {setShoppingCart}/>
           </div>
         ) : (
-          <div>
-            <p>Please Choose a Plant</p>
+          <div className = "shoppingCart">
+            <p>Your cart is empty</p>
           </div>
         )}       
       </main>
